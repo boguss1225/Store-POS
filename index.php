@@ -261,7 +261,7 @@
                       </div>
                   </div>
                   <div>
-                      <table class="table m-0" id="cartTable" style = "display:block; min-width: 100% ; height: 700px ;overflow-y:scroll;">
+                      <table class="table m-0" id="cartTable" style = "display:block; min-width: 100% ; height: 450px ;overflow-y:scroll;">
   
                           <thead class="cartList" id = "cartList">
                           <tr>
@@ -983,6 +983,7 @@
         var gross_price = document.getElementById('gross_price').innerHTML;
         gross_price= parseFloat(gross_price.slice(1));
         document.getElementById("payablePrice").value = "$ "+RoundTo(gross_price,0.05).toFixed(2);
+        calculatechange();
         //priceCopy();
       }
 
