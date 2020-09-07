@@ -283,10 +283,10 @@
                   <hr>
                  <div class="m-t-5" style="margin-bottom: 20px">
                      <div class="row">
-                         <div class="col-md-3"> <span style="font-weight:bold; font-size: 1em;">Total Item(s) :</span></div>
-                         <div class="col-md-3"> <span id="total"  style="font-weight:bold; font-size: 1em;"></span></div>
+                        <div class="col-md-3"> <span style="font-weight:bold; font-size: 1em;">Total Item(s) :</span></div>
+                        <div class="col-md-3"> <span id="total"  style="font-weight:bold; font-size: 1em;"></span></div>
                         <div class="col-md-3"> <span style="font-weight:bold; font-size: 1em;">Gross Price :</span></div>
-                        <div class="col-md-3"> <span id="gross_price" style="font-weight:bold; font-size: 1em;">
+                        <div class="col-md-3"> <span id="gross_price" style="font-weight:bold; font-size: 3em;">
                         </span>
                      	</div>  
                      </div>
