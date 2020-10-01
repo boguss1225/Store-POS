@@ -1,14 +1,15 @@
 # Store Point of Sale
  Desktop Point of Sale app built with electron\
-
+  **This is modified local only version**
+  
   **Modified:**
  Modified to PHP version by Boguss\
  - dollar version
  - using MySQL
  - using XAMPP
  - settlement print it added ( settlement = from 17:00 to next day 16:59)
-
-
+ - multiple PCs can be connected through IP address of main computer with main DB
+ 
   **Features:**
 
 - Can be used by multiple PC's on a network with one central database.
