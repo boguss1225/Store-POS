@@ -33,6 +33,7 @@ function clearCart(){
 function handleCartClick(i,itemNamePostedByCalculator){
     // another payment function, only apply to special products.
     if(itemNamePostedByCalculator !== undefined){
+
         let itemPrice = Number(document.getElementById('result').value.slice(2))
         let itemName = itemNamePostedByCalculator
         let thisProduct = 
@@ -51,16 +52,7 @@ function handleCartClick(i,itemNamePostedByCalculator){
         if(itemName == "Take Away"
         ||itemName == "No Tax product"
         ||itemName == "product"
-        ||itemName == "Tomato"
-        ||itemName == "Apple"
-        ||itemName == "Carrot"
-        ||itemName == "Onion"
-        ||itemName == "Mushroom"
-        ||itemName == "banana"
-        ||itemName == "lemon_"
-        ||itemName == "redonion"
-        ||itemName == "capsicum"
-        ||itemName == "zucchini"
+        ||itemName == "Cash Out"
         ||itemName == "Vegie"
         ||itemName == "JOURNAL&CARD"
         ||itemName == "CHIPS" ){
@@ -160,7 +152,7 @@ if(existingProducts != null){
     // add existing items to cart view
     for(let i = 0 ; i < selectedProductsArray.length; i++){
         let {name,qty,subTotal} = selectedProductsArray[i]
-        subTotal = Math.floor(subTotal * 100) /100
+        subTotal = Number(Math.round(subTotal+'e2')+'e-2')
         cartNode.innerHTML += '<th width="50px">'+(i+1)+'</th>' + 
         '<th width="150px">'+name+'</th>' + 
         '<th width="120px" style="text-align:center;"> <button class ="addQty" style= "margin-right:5px"> + </button> '+qty+' <button class = "minusQty" style= "margin-left : 5px"> - </button> </th>' + 
@@ -171,9 +163,12 @@ if(existingProducts != null){
 
         // caculate & show price
         grossPrice += subTotal 
+        grossPrice = Number(Math.round(grossPrice+'e2')+'e-2')
         totalQty += qty
         totalItemNode.innerText = totalQty
-        totalPriceNode.innerText = '$' + Math.floor(grossPrice * 100) /100
+        totalPriceNode.innerText = '$'+ grossPrice
+        //totalPriceNode.innerText = '$' + Math.floor(grossPrice * 100) /100
+        
     }
 }
 // ***IMPORTANT***  This part have to be placed under cart control section
